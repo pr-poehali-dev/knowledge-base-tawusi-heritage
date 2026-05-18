@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1779097714668122414.html"
 	],
 	prefix: "",
 	theme: {
@@ -17,6 +18,10 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+				display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+				body: ['"IBM Plex Sans"', 'sans-serif'],
+			},
 		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
@@ -88,7 +93,10 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeInUp 0.7s ease forwards',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-gold': 'pulseGold 3s ease-in-out infinite',
 			}
 		}
 	},
