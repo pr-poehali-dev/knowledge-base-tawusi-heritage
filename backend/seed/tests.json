@@ -1,0 +1,38 @@
+{
+  "tests": [
+    {
+      "name": "Status before seed",
+      "method": "GET",
+      "path": "/?action=status",
+      "expectedStatus": 200,
+      "expectedBody": {"counts": {}},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Run seed",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "run"},
+      "expectedStatus": 201,
+      "expectedBody": {"seeded": true},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Status after seed",
+      "method": "GET",
+      "path": "/?action=status",
+      "expectedStatus": 200,
+      "expectedBody": {"counts": {}},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Repeat seed is idempotent",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "run"},
+      "expectedStatus": 200,
+      "expectedBody": {"seeded": false},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
