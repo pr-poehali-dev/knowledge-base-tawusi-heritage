@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Главная",
+    "tree": "Родовое древо",
+    "culture": "Культура",
+    "library": "Библиотека",
+    "cabinet": "Личный кабинет",
+    "contact": "Контакты",
+    "login": "Войти",
+    "register": "Регистрация"
+  },
+  "login": {
+    "title": "Добро пожаловать",
+    "subtitle": "Войдите в свой аккаунт",
+    "description": "Сохраняйте историю своей семьи и вносите вклад в сохранение езидского наследия",
+    "email": "Электронная почта",
+    "email_placeholder": "your@email.com",
+    "password": "Пароль",
+    "password_placeholder": "••••••••",
+    "remember_me": "Запомнить меня",
+    "forgot_password": "Забыли пароль?",
+    "submit": "Войти",
+    "submitting": "Выполняется вход...",
+    "no_account": "Нет аккаунта?",
+    "create_account": "Создать аккаунт",
+    "or": "или",
+    "back_home": "На главную",
+    "error_invalid": "Неверный email или пароль",
+    "error_network": "Ошибка сети. Попробуйте позже",
+    "success": "Вход выполнен успешно"
+  },
+  "register": {
+    "title": "Создать аккаунт",
+    "subtitle": "Присоединяйтесь к платформе",
+    "name": "Ваше имя",
+    "name_placeholder": "Имя Фамилия",
+    "email": "Электронная почта",
+    "email_placeholder": "your@email.com",
+    "password": "Пароль",
+    "password_placeholder": "Минимум 8 символов",
+    "password_confirm": "Подтвердите пароль",
+    "password_confirm_placeholder": "Повторите пароль",
+    "submit": "Зарегистрироваться",
+    "submitting": "Создание аккаунта...",
+    "have_account": "Уже есть аккаунт?",
+    "sign_in": "Войти",
+    "error_passwords": "Пароли не совпадают",
+    "error_email_taken": "Этот email уже используется",
+    "success": "Аккаунт создан успешно"
+  },
+  "auth": {
+    "logout": "Выйти",
+    "profile": "Профиль",
+    "my_family": "Моя семья"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "save": "Сохранить",
+    "cancel": "Отмена"
+  }
+}

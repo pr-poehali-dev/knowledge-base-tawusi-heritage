@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useAuth } from "@/context/AuthContext";
 
-const NAV_ITEMS = [
-  { id: "home", label: "Главная" },
-  { id: "tree", label: "Родовое древо" },
-  { id: "culture", label: "Культура" },
-  { id: "library", label: "Библиотека" },
-  { id: "cabinet", label: "Личный кабинет" },
-  { id: "contact", label: "Контакты" },
+const NAV_KEYS = [
+  { id: "home", key: "nav.home" },
+  { id: "tree", key: "nav.tree" },
+  { id: "culture", key: "nav.culture" },
+  { id: "library", key: "nav.library" },
+  { id: "cabinet", key: "nav.cabinet" },
+  { id: "contact", key: "nav.contact" },
 ];
 
 interface NavbarProps {
@@ -17,6 +21,9 @@ interface NavbarProps {
 }
 
 export default function Navbar({ activeSection, mobileMenuOpen, onScrollTo, onToggleMobile }: NavbarProps) {
+  const { t } = useTranslation();
+  const { user, logout } = useAuth();
+
   return (
     <>
       <nav
@@ -43,20 +50,45 @@ export default function Navbar({ activeSection, mobileMenuOpen, onScrollTo, onTo
         </div>
 
         <div className="hidden md:flex items-center gap-7">
-          {NAV_ITEMS.map((item) => (
+          {NAV_KEYS.map((item) => (
             <button
               key={item.id}
               onClick={() => onScrollTo(item.id)}
               className={`nav-link ${activeSection === item.id ? "active" : ""}`}
             >
-              {item.label}
+              {t(item.key)}
             </button>
           ))}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="btn-outline-gold px-4 py-2 rounded text-sm">Войти</button>
-          <button className="btn-gold px-4 py-2 rounded text-sm">Регистрация</button>
+          <LanguageSwitcher />
+          {user ? (
+            <div className="flex items-center gap-3">
+              <span
+                className="flex items-center gap-1.5 text-sm"
+                style={{ color: "rgba(232,201,122,0.65)", fontFamily: "'IBM Plex Sans', sans-serif" }}
+              >
+                <Icon name="UserCircle" size={15} style={{ color: "var(--gold)" }} />
+                {user.name}
+              </span>
+              <button
+                onClick={() => logout()}
+                className="btn-outline-gold px-4 py-2 rounded text-sm"
+              >
+                {t("auth.logout")}
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link to="/login" className="btn-outline-gold px-4 py-2 rounded text-sm">
+                {t("nav.login")}
+              </Link>
+              <Link to="/login" className="btn-gold px-4 py-2 rounded text-sm">
+                {t("nav.register")}
+              </Link>
+            </>
+          )}
         </div>
 
         <button
@@ -73,19 +105,32 @@ export default function Navbar({ activeSection, mobileMenuOpen, onScrollTo, onTo
           className="fixed inset-0 z-40 pt-16 px-6 pb-8 flex flex-col gap-4"
           style={{ background: "rgba(13,10,6,0.97)", backdropFilter: "blur(20px)" }}
         >
-          {NAV_ITEMS.map((item) => (
+          {NAV_KEYS.map((item) => (
             <button
               key={item.id}
               onClick={() => onScrollTo(item.id)}
               className="nav-link text-left text-base py-3 border-b"
               style={{ borderColor: "rgba(201,168,76,0.1)" }}
             >
-              {item.label}
+              {t(item.key)}
             </button>
           ))}
           <div className="flex flex-col gap-3 mt-4">
-            <button className="btn-outline-gold py-3 rounded text-sm">Войти</button>
-            <button className="btn-gold py-3 rounded text-sm">Регистрация</button>
+            <LanguageSwitcher />
+            {user ? (
+              <button onClick={() => logout()} className="btn-outline-gold py-3 rounded text-sm">
+                {t("auth.logout")}
+              </button>
+            ) : (
+              <>
+                <Link to="/login" onClick={onToggleMobile} className="btn-outline-gold py-3 rounded text-sm text-center">
+                  {t("nav.login")}
+                </Link>
+                <Link to="/login" onClick={onToggleMobile} className="btn-gold py-3 rounded text-sm text-center">
+                  {t("nav.register")}
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

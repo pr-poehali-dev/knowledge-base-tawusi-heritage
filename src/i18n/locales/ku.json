@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Malper",
+    "tree": "Dara Malbatê",
+    "culture": "Çand",
+    "library": "Pirtûkxane",
+    "cabinet": "Kabîneya Min",
+    "contact": "Têkilî",
+    "login": "Têkeve",
+    "register": "Tomar bike"
+  },
+  "login": {
+    "title": "Xêr hatî",
+    "subtitle": "Têkeve hesabê xwe",
+    "description": "Dîroka malbata xwe biparêze û beşdarî parastina mîrateya Êzidî bibe",
+    "email": "Navnîşana e-nameyê",
+    "email_placeholder": "your@email.com",
+    "password": "Şîfre",
+    "password_placeholder": "••••••••",
+    "remember_me": "Min bi bîr bîne",
+    "forgot_password": "Şîfreya xwe ji bîr kir?",
+    "submit": "Têkeve",
+    "submitting": "Têketinê pêk tîne...",
+    "no_account": "Hesabê te nîne?",
+    "create_account": "Hesab biafirîne",
+    "or": "yan",
+    "back_home": "Vegere malperê",
+    "error_invalid": "E-name yan şîfreya xelet",
+    "error_network": "Çewtiya torê. Dîsa biceribîne",
+    "success": "Têketin bi serketî pêk hat"
+  },
+  "register": {
+    "title": "Hesabek biafirîne",
+    "subtitle": "Beşdarî platformê bibe",
+    "name": "Navê te",
+    "name_placeholder": "Nav Famîl",
+    "email": "Navnîşana e-nameyê",
+    "email_placeholder": "your@email.com",
+    "password": "Şîfre",
+    "password_placeholder": "Herî kêm 8 tîp",
+    "password_confirm": "Şîfreyê piştrast bike",
+    "password_confirm_placeholder": "Şîfreyê dubare bike",
+    "submit": "Tomar bike",
+    "submitting": "Hesab tê çêkirin...",
+    "have_account": "Hesabê te heye?",
+    "sign_in": "Têkeve",
+    "error_passwords": "Şîfre li hev nayên",
+    "error_email_taken": "Ev e-name berê tê bikaranîn",
+    "success": "Hesab bi serketî hat çêkirin"
+  },
+  "auth": {
+    "logout": "Derkeve",
+    "profile": "Profîl",
+    "my_family": "Malbata Min"
+  },
+  "common": {
+    "loading": "Tê barkirin...",
+    "error": "Xeletiyek çêbû",
+    "save": "Tomar bike",
+    "cancel": "Betal bike"
+  }
+}

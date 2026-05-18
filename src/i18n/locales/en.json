@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "tree": "Family Tree",
+    "culture": "Culture",
+    "library": "Library",
+    "cabinet": "My Cabinet",
+    "contact": "Contact",
+    "login": "Sign In",
+    "register": "Register"
+  },
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Sign in to your account",
+    "description": "Preserve your family history and contribute to the protection of Yazidi heritage",
+    "email": "Email address",
+    "email_placeholder": "your@email.com",
+    "password": "Password",
+    "password_placeholder": "••••••••",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?",
+    "submit": "Sign In",
+    "submitting": "Signing in...",
+    "no_account": "Don't have an account?",
+    "create_account": "Create account",
+    "or": "or",
+    "back_home": "Back to home",
+    "error_invalid": "Invalid email or password",
+    "error_network": "Network error. Please try again",
+    "success": "Signed in successfully"
+  },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Join the platform",
+    "name": "Your name",
+    "name_placeholder": "First Last",
+    "email": "Email address",
+    "email_placeholder": "your@email.com",
+    "password": "Password",
+    "password_placeholder": "Minimum 8 characters",
+    "password_confirm": "Confirm password",
+    "password_confirm_placeholder": "Repeat password",
+    "submit": "Create Account",
+    "submitting": "Creating account...",
+    "have_account": "Already have an account?",
+    "sign_in": "Sign In",
+    "error_passwords": "Passwords do not match",
+    "error_email_taken": "This email is already taken",
+    "success": "Account created successfully"
+  },
+  "auth": {
+    "logout": "Sign Out",
+    "profile": "Profile",
+    "my_family": "My Family"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}
